@@ -1,0 +1,26 @@
+
+table {
+    display: table;
+    padding: 0px;
+    border-collapse: collapse;
+}
+
+td {
+    height: 50px;
+    width: 50px;
+    background-color: burlywood;
+    text-align: center;
+    border: 0px;
+    font-weight: bold;
+    color: black;
+    font-size:20px;
+}
+
+td.black {
+    background-color: brown;    
+}
+
+.control-bar {
+    margin-top:20px;
+    margin-bottom: 20px;
+}

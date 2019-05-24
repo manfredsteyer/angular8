@@ -3,16 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NQueensComponent } from './n-queens/n-queens.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      NQueensComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      FormsModule
+   ],
+   providers: [],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }

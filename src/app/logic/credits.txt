@@ -1,0 +1,6 @@
+# Credits
+
+This implementation was taken from [1] and slightly 
+adopted to TypeScript.
+
+[1] https://github.com/trekhleb/javascript-algorithms

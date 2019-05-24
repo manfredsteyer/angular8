@@ -1,0 +1,24 @@
+<p>
+  Count: <input maxlength="3" size="3" [(ngModel)]="count">
+  <button (click)="calc()">Solve in UI thread</button>
+  <button (click)="calcWithWorker()">Solve in Web Worker</button>
+</p>
+
+<div *ngIf="solutions.length > 0">
+
+  <div class="control-bar">
+    <button (click)="prev()">Prev</button>
+    {{ currentSolutionIndex + 1 }} /
+    {{ solutions.length }}
+    <button (click)="next()">Next</button>
+  </div>
+
+  <table>
+    <tr *ngFor="let r of rows">
+      <td *ngFor="let c of cols" [class.black]="isBlack(c, r)">
+        <span *ngIf="hasQueen(r, c)">&#11044;</span>
+      </td>
+    </tr>
+  </table>
+
+</div>
