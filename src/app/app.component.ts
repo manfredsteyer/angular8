@@ -11,6 +11,6 @@ export class AppComponent {
 
   constructor(loc: Location, pLoc: PlatformLocation) {
     loc.onUrlChange((url) => console.debug('url change', url));
-    // pLoc.hostname
+    console.debug('hostname: ', pLoc.hostname);
   }
 }
