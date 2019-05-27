@@ -1,0 +1,13 @@
+<p>
+  Lazy route works!
+</p>
+<div *ngIf="show">
+  <p #info>
+    Please note that beginning with Angular 8 the string-based syntax for loadChildren is deprecated.
+    Instead, you can use:
+  </p>
+  <pre>
+    loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule)
+  </pre>
+  
+</div>
