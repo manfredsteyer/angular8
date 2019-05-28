@@ -1,27 +1,17 @@
-# DemoApp
+# Angular 8 Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0-rc.4.
+Shows some new features in Angular 8.
 
-## Development server
+## Queens Problem
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The implementation of the queens problem shows how we can execute intense calulations in the background using web worker.
 
-## Code scaffolding
+To test it, request a solution for the 12x12 queens problem using the main thread and also using web workers. You'll see that in the first case the UI freezes while in the second case one can interact with it during the calcuation.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 4 Steps to your web worker in Angular 8
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Generate a component: ``ng g c my-calc``
+- In the same directory, generate a worker with the same name: ``ng g worker my-calc``
+  - This gives you a worker script and some code within the component to call the worker
+- Update the worker script to your needs
+- Update the code for calling the worker to your needs
