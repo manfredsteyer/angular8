@@ -20,8 +20,6 @@ export class NQueensComponent implements OnInit {
   currentSolutionIndex = 0;
   currentSolution: Solution;
 
-  solving = false;
-
   ngOnInit() {
   }
 
@@ -44,13 +42,11 @@ export class NQueensComponent implements OnInit {
     worker.addEventListener('message', (event) => {
       // tslint:disable-next-line: no-console
       console.debug('worker result', event.data);
-      this.solving = false;
 
       this.processResult(event.data);
     });
 
     worker.postMessage({count});
-    this.solving = true;
   }
 
   next() {
@@ -73,6 +69,7 @@ export class NQueensComponent implements OnInit {
   }
 
   isBlack(row: number, col: number) {
+    // TODO: Refactor into pipe
     const offset = row % 2;
     return (col + 1 + offset) % 2 === 0;
   }
