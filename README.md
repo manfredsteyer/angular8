@@ -8,6 +8,8 @@ The implementation of the queens problem shows how we can execute intense calula
 
 To test it, request a solution for the 12x12 queens problem using the main thread and also using web workers. You'll see that in the first case the UI freezes while in the second case one can interact with it during the calcuation.
 
+![Queens Problem](queens.png)
+
 ## 4 Steps to your web worker in Angular 8
 
 - Generate a component: ``ng g c my-calc``
